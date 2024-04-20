@@ -24,7 +24,7 @@ after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   # Take those images and push them to docker hub 
 
-  - docker build --no-cache -t nahuelolea2/multi-client ./client
-  - docker build --no-cache -t nahuelolea2/multi-nginx ./nginx
-  - docker build --no-cache -t nahuelolea2/multi-server ./server
-  - docker build --no-cache -t nahuelolea2/multi-worker ./worker
+  - docker push -t nahuelolea2/multi-client ./client
+  - docker push -t nahuelolea2/multi-nginx ./nginx
+  - docker push -t nahuelolea2/multi-server ./server
+  - docker push -t nahuelolea2/multi-worker ./worker
