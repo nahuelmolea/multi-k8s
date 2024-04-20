@@ -4,6 +4,11 @@ language: generic
 services:
   - docker
 
+env:
+  global:
+    # Reemplazar con tu nombre de usuario real de Docker Hub
+    DOCKER_USERNAME: nahuelolea2
+
 before_install:
   - docker build -t nahuelolea2/react-test -f ./client/Dockerfile.dev ./client
 
